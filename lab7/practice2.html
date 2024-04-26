@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #custom-paragraph {
+            padding: 10px;
+            border-radius: 5px;
+            border: 3px solid #000;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>EECS 348 Lab Seven Practice Two</h1>
+        <p id="custom-paragraph">Paragraph to be altered</p>
+        <label for="borderR">Border R(0-255):</label>
+        <input type="number" id="borderR" ><br>
+        <label for="borderG">Border G(0-255):</label>
+        <input type="number" id="borderG" ><br>
+        <label for="borderB">Border B(0-255):</label>
+        <input type="number" id="borderB" ><br>
+        <label for="borderWidth">Border Width:</label>
+        <input type="number" id="borderWidth" ><br>
+        <label for="bgR">Background R(0-255):</label>
+        <input type="number" id="bgR" ><br>
+        <label for="bgG">Background G(0-255):</label>
+        <input type="number" id="bgG" ><br>
+        <label for="bgB">Background B(0-255):</label>
+        <input type="number" id="bgB"><br><br>
+        <button id="applyButton">Change the Color</button>
+    </div>
+
+    <script>
+        const paragraph = document.getElementById('custom-paragraph');
+        const borderR = document.getElementById('borderR');
+        const borderG = document.getElementById('borderG');
+        const borderB = document.getElementById('borderB');
+        const borderWidth = document.getElementById('borderWidth');
+        const bgR = document.getElementById('bgR');
+        const bgG = document.getElementById('bgG');
+        const bgB = document.getElementById('bgB');
+        const applyButton = document.getElementById('applyButton');
+
+        function updateStyles() {
+            const borderColor = `rgb(${borderR.value}, ${borderG.value}, ${borderB.value})`;
+            paragraph.style.borderColor = borderColor;
+            paragraph.style.borderWidth = `${borderWidth.value}px`;
+
+            const bgColor = `rgb(${bgR.value}, ${bgG.value}, ${bgB.value})`;
+            paragraph.style.backgroundColor = bgColor;
+        }
+
+        applyButton.addEventListener('click', updateStyles);
+    </script>
+</body>
+
+</html>

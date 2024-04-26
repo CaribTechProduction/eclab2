@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Practice 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: grey;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .profile {
+            max-width: 600px;
+            background-color: grey;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+        }
+
+        .title {
+            color: grey;
+            font-size: 18px;
+        }
+
+        button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0 10px;
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 22px;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile">
+        <img src="profile-pic.jpg" alt="John Doe" style="width:50%">
+        <h1>Kemar Wilson</h1>
+        <p class="title">Engineering Student & IT Engineer John Deere </p>
+        <p>University of Kansas</p>
+        <hr>
+        <a href="mailto:kem.wilson@ku.edu"><i class="fa fa-envelope"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/johndoe"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <p><button onclick="sendEmail()">Contact</button></p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BadB1z-V_qU?si=b_WbVJEYeb6YKFUi"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <script>
+        function sendEmail() {
+            var recipient = 'kem.wilson@ku.edu';
+            var subject = 'Subject of the Email';
+            var body = 'Body of the Email';
+
+            window.open('mailto:' + recipient + '?subject=' + subject + '&body=' + body);
+        }
+    </script>
+</body>
+
+</html>

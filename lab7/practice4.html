@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 4</title>
+</head>
+
+<body>
+    <h1>EECS 348 Lab Seven Practice Four</h1>
+    <form method="post">
+        <label for="number">Enter a number:</label>
+        <input type="text" name="number">
+        <input type="submit" value="Generate Table">
+    </form>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $number = $_POST['number'];
+        
+        echo '<h2>Multiplication Table up to '.$number.'</h2>';
+        echo '<table border="1">';
+        echo '<tr><th>&nbsp;</th>';
+        for ($i = 1; $i <= $number; $i++) {
+            echo '<th>'.$i.'</th>';
+        }
+        echo '</tr>';
+
+        for ($i = 1; $i <= $number; $i++) {
+            echo '<tr><th>'.$i.'</th>';
+            for ($j = 1; $j <= $number; $j++) {
+                echo '<td>'.$i * $j.'</td>';
+            }
+            echo '</tr>';
+        }
+        echo '</table>';
+    }
+    ?>
+</body>
+
+</html>
